@@ -50,11 +50,7 @@ function draw() {
   // 3) HUD
   fill(0);
   text(world.name, 10, 18);
-  text(
-    "Move: A/D or ←/→ • Jump: Space/W/↑ • Respawn: R • Next Level: I",
-    10,
-    36,
-  );
+  text("Move: A/D or ←/→ • Jump: Space/W/↑ • Respawn: R ", 10, 36);
 }
 
 function keyPressed() {
@@ -71,7 +67,7 @@ function keyPressed() {
 
 //load next level by pressing I
 if (key === "i" || key === "I") {
-  //FILL IN CODE HERE
+  loadLevel(levelIndex + 1);
 }
 
 /*
