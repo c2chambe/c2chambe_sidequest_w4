@@ -50,7 +50,7 @@ function draw() {
   // 3) HUD
   fill(0);
   text(world.name, 10, 18);
-  text("Move: A/D or ←/→ • Jump: Space/W/↑ • Next: N", 10, 36);
+  text("Move: A/D or ←/→ • Jump: Space/W/↑ • Respawn: R", 10, 36);
 }
 
 function keyPressed() {
@@ -59,10 +59,9 @@ function keyPressed() {
     player.jump();
   }
 
-  // Optional: cycle levels with N (as with the earlier examples)
-  if (key === "n" || key === "N") {
-    const next = (levelIndex + 1) % data.levels.length;
-    loadLevel(next);
+  // Respawn player by pressing R
+  if (key === "r" || key === "R") {
+    player = new BlobPlayer();
   }
 }
 
