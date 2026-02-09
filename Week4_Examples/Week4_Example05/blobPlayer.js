@@ -28,7 +28,7 @@ class BlobPlayer {
     // ----- Transform -----
     this.x = 0;
     this.y = 0;
-    this.r = 26;
+    this.r = 18;
 
     // ----- Velocity -----
     this.vx = 0;

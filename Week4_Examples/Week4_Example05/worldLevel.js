@@ -28,11 +28,11 @@ Expected JSON shape for each level (from your provided file):
 class WorldLevel {
   constructor(levelJson) {
     // A readable label for HUD.
-    this.name = levelJson.name || "Level";
+    this.name = levelJson.name || "Level 1: The Maze";
 
     // Theme defaults + override with JSON.
     this.theme = Object.assign(
-      { bg: "#F0F0F0", platform: "#C8C8C8", blob: "#1478FF" },
+      { bg: "#af94eb", platform: "#270373", blob: "#1478FF" },
       levelJson.theme || {},
     );
 
@@ -44,7 +44,7 @@ class WorldLevel {
     // Use optional chaining so levels can omit fields safely.
     this.start = {
       x: levelJson.start?.x ?? 80,
-      y: levelJson.start?.y ?? 180,
+      y: levelJson.start?.y ?? 220,
       r: levelJson.start?.r ?? 26,
     };
 
