@@ -1,19 +1,20 @@
-## Project Title
+## Basic Platforming Level 1
 
-GBDA302 Week 4 Example 5: Blob Platformer (JSON + Classes)
+Based of the code from GBDA302 Week 4 Example 5: Blob Platformer (JSON + Classes)
 
 ---
 
 ## Authors
 
-Karen Cochrane and David Han
+Clarissa Chamberlain (21067308)
 
 ---
 
 ## Description
 
-This matches the structure of the original blob sketch from Week 2 but moves
-details into classes.
+This is a short platforming level that demonstrates how to create a basic video game level through arrays and JSON data.
+
+Use WASD or Arrow Keys to move, SPACE to jump, and press R to respawn the player.
 
 ---
 
@@ -37,6 +38,6 @@ N/A
 
 ## GenAI
 
-The code was written by Dr. Karen Cochrane and David Han but they used GenAI to write the comments.
+The code was modified by Clarissa Chamberlain, who did not use GenAI for this sidequest.
 
 ---

@@ -71,11 +71,11 @@ function keyPressed() {
   if (key === "r" || key === "R") {
     player = new BlobPlayer();
   }
-}
 
-//load next level by pressing I
-if (key === "i" || key === "I") {
-  loadLevel(levelIndex + 1);
+  //load next level by pressing I
+  if (key === "i" || key === "I") {
+    loadLevel(levelIndex + 1);
+  }
 }
 
 /*
