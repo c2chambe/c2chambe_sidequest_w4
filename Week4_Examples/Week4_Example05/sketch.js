@@ -58,7 +58,7 @@ function draw() {
   text("Move: A/D or ←/→ • Jump: Space/W/↑ • Respawn: R ", 10, 36);
 
   //draw star image to indicate goal
-  image(star, 540, 60, 30, 30);
+  image(star, 540, 60, 40, 30);
 }
 
 function keyPressed() {
@@ -76,25 +76,25 @@ function keyPressed() {
   if (key === "i" || key === "I") {
     loadLevel(levelIndex + 1);
   }
-}
 
-/*
+  /*
 Load a level by index:
 - create a WorldLevel instance from JSON
 - resize canvas based on inferred geometry
 - spawn player using level start + physics
 */
-function loadLevel(i) {
-  levelIndex = i;
+  function loadLevel(i) {
+    levelIndex = i;
 
-  // Create the world object from the JSON level object.
-  world = new WorldLevel(data.levels[levelIndex]);
+    // Create the world object from the JSON level object.
+    world = new WorldLevel(data.levels[levelIndex]);
 
-  // Fit canvas to world geometry (or defaults if needed).
-  const W = world.inferWidth(640);
-  const H = world.inferHeight(360);
-  resizeCanvas(W, H);
+    // Fit canvas to world geometry (or defaults if needed).
+    const W = world.inferWidth(640);
+    const H = world.inferHeight(360);
+    resizeCanvas(W, H);
 
-  // Apply level settings + respawn.
-  player.spawnFromLevel(world);
+    // Apply level settings + respawn.
+    player.spawnFromLevel(world);
+  }
 }
