@@ -21,9 +21,14 @@ let levelIndex = 0;
 let world; // WorldLevel instance (current level)
 let player; // BlobPlayer instance
 
+let star; //variable for star image
+
 function preload() {
   // Load the level data from disk before setup runs.
   data = loadJSON("levels.json");
+
+  //load star picture
+  star = loadImage("./Assets/Star.png");
 }
 
 function setup() {
@@ -51,6 +56,9 @@ function draw() {
   fill(0);
   text(world.name, 10, 18);
   text("Move: A/D or ←/→ • Jump: Space/W/↑ • Respawn: R ", 10, 36);
+
+  //draw star image to indicate goal
+  image(star, 540, 60, 30, 30);
 }
 
 function keyPressed() {
