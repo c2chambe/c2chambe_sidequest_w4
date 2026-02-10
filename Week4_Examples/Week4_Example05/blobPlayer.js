@@ -26,8 +26,8 @@ The algorithm is the same as the original blob world example from Week 2:
 class BlobPlayer {
   constructor() {
     // ----- Transform -----
-    this.x = 0;
-    this.y = 0;
+    this.x = 80;
+    this.y = 220;
     this.r = 18;
 
     // ----- Velocity -----
@@ -73,7 +73,7 @@ class BlobPlayer {
 
     this.vx = 0;
     this.vy = 0;
-    this.onGround = false;
+    this.onGround = true; // player starts on ground
   }
 
   /*
